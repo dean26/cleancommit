@@ -28,7 +28,7 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         //
-        return Company::create($request->all);
+        return Company::create($request->all());
     }
 
     /**
