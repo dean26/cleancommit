@@ -20,3 +20,4 @@ php artisan storage:link
 ```
 php artistan serve
 ```
+Testing with PHP 7.4.16
