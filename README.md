@@ -7,7 +7,7 @@ cp .env.example .env
 Add your DB connections params
 ```
 php artistan migrate
-php db:seed
+php artistan db:seed
 ```
 ```
 npm install
