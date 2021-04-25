@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\Company;
+use Illuminate\Http\Request;
+
+class CompanyController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        return Company::all();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+        return Company::create($request->all);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Company  $company
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Company $company)
+    {
+        //
+        return $company;
+    }
+
+}
