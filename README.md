@@ -4,7 +4,7 @@ cd cleancommit
 composer install
 cp .env.example .env
 ```
-Add your DB connections params
+Add your DB connections params to .env
 ```
 php artistan migrate
 php artistan db:seed
