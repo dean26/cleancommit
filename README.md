@@ -4,10 +4,10 @@ cd cleancommit
 composer install
 cp .env.example .env
 ```
-Add your DB connections params
+Add your DB connections params to .env
 ```
 php artistan migrate
-php db:seed
+php artistan db:seed
 ```
 ```
 npm install
