@@ -41,7 +41,7 @@ class CompanyController extends Controller
      */
     public function store(CompanyStoreRequest $request)
     {
-        $company = Company::create($request->all());
+        $company = Company::create($request->validated());
 
         //image upload
         $this->save_image($request, $company);
@@ -80,7 +80,7 @@ class CompanyController extends Controller
      */
     public function update(CompanyUpdateRequest $request, Company $company)
     {
-        $company->update($request->all());
+        $company->update($request->validated());
 
         //image upload
         $this->save_image($request, $company);

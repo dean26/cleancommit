@@ -38,7 +38,7 @@ class EmployeeController extends Controller
      */
     public function store(EmployeeStoreRequest $request)
     {
-        $employee = Employee::create($request->all());
+        $employee = Employee::create($request->validated());
         return redirect(route('employee.index'))->with('flash_notice', trans('Added'));
     }
 
@@ -73,7 +73,7 @@ class EmployeeController extends Controller
      */
     public function update(EmployeeUpdateRequest $request, Employee $employee)
     {
-        $employee->update($request->all());
+        $employee->update($request->validated());
         return redirect(route('employee.index'))->with('flash_notice', trans('Updated'));
     }
 
