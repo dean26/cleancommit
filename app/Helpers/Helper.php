@@ -4,7 +4,6 @@ namespace App\Helpers;
 
 class Helper{
 
-
     public static function createSlug($str, $replace = array(), $delimiter = '-')
     {
     
